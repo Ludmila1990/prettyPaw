@@ -3,9 +3,16 @@ import './index.html';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './index.scss';
+import { initSliders } from './modules/sliders';
 
 
 // use modules
+
+initSliders('.about__slider', {
+  pagination: {
+    el: '.about__slider-pagination',
+  }
+});
 
 const videoBg = document.querySelector('.video-bg');
 
