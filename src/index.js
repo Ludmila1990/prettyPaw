@@ -14,6 +14,13 @@ initSliders('.about__slider', {
   }
 });
 
+initSliders('.career__slider', {
+  pagination: {
+    el: '.career__slider-pagination',
+  },
+  effect: 'creative',
+});
+
 const videoBg = document.querySelector('.video-bg');
 
 videoBg.innerHTML = `
