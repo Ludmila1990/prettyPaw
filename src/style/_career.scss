@@ -1,16 +1,11 @@
 .career {
+  overflow-x: hidden;
   padding-top: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 
   @include lg {
     padding-top: 100px;
-    padding-bottom: 80px;
-  }
-
-  &__container {
-    @include md {
-      position: relative;
-    }
+    padding-bottom: 100px;
   }
 
   &__title {
@@ -21,28 +16,36 @@
     color: $second;
     margin-bottom: 24px;
 
+    @include md {
+      grid-area: title;
+      margin-bottom: 0;
+    }
+
     @include lg {
       font-size: 52px;
-      margin-bottom: 40px;
     }
   }
 
   &__content {
+    margin-bottom: 40px;
+
     @include md {
       display: grid;
-      grid-template-columns: 75% auto;
-      gap: 21px;
-      margin-bottom: 40px;
+      grid-template-columns: 1fr min-content;
+      justify-content: space-between;
+      gap: 11px 21px;
+      grid-template-areas: 
+        'title link'
+        'description .';
     }
 
     @include lg {
-      gap: 31px;
+      gap: 27px 31px;
       margin-bottom: 50px;
     }
 
     @include xl {
-      grid-template-columns: 58% auto;
-      gap: 0;
+      grid-template-columns: 690px min-content;
     }
   }
 
@@ -50,34 +53,62 @@
     margin-bottom: 24px;
 
     @include md {
+      grid-area: description;
       margin-bottom: 0;
     }
   }
 
   &__link {
-    margin-bottom: 40px;
-
     @include md {
-      position: absolute;
-      top: 0;
-      right: 32px;
-    }
-
-    @include xl {
-      position: absolute;
-      top: 0;
-      right: 30px;
+      grid-area: link;
     }
   }
 
-  &__slider-pagination {
+  &__slider {
+    overflow: visible;
+  }
+
+  &__image-item {
+    height: unset;
+    display: flex;
+    align-items: center;
+
+    @include sm {
+      &_odd {
+        width: 56%;
+      }
+  
+      &_even {
+        width: 40%;
+      }
+    }
+
     @include md {
-      display: none;
+      &_odd {
+        width: 34%;
+      }
+  
+      &_even {
+        width: 25%;
+      }
+    }
+
+    @include xl {
+      &_odd {
+        width: 27%;
+      }
+  
+      &_even {
+        width: 20%;
+      }
     }
   }
 
   &__image {
-    border-radius: 16px;
+      border-radius: 16px;
   }
-}
+
+  }
+
+
 

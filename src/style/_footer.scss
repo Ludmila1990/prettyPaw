@@ -1,5 +1,6 @@
 .footer {
-  padding: 30px 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
   @include lg {
     padding-top: 120px;
@@ -9,53 +10,57 @@
   &__container {
     @include sm {
       display: grid;
-      grid-template-columns: 1fr auto;
-      grid-template-areas: 
-        'logo list'
-        'copyright developers';
+      gap: 40px;
+      grid-template-columns: 1fr max-content;
+    }
+
+    @include lg {
+      gap: 72px;
     }
   }
 
   &__logo {
     width: 200px;
-    height: 32px;
     margin-bottom: 32px;
 
     @include sm {
-      grid-area: logo;
-      margin-bottom: 42px;
+      margin-bottom: 0;
     }
 
     @include lg {
       width: 360px;
-      height: 56px;
-      margin-bottom: 72px;
     }
   }
 
   &__social-list {
-    display: grid;
-    grid-template-columns: repeat(2, 36px);
+    display: flex;
     gap: 16px;
     margin-bottom: 52px;
 
     @include sm {
-      grid-area: list;
-      margin-bottom: 40px;
+      margin-bottom: 0;
     }
 
     @include lg {
-      grid-template-columns: repeat(2, 50px);
       gap: 36px;
-      margin-bottom: 78px;
+    }
+  }
+
+  &__social-link {
+    display: block;
+    width: 36px;
+
+    @include lg {
+      width: 50px;
     }
   }
 
   &__developers {
     margin-bottom: 52px;
+    line-height: 1;
 
     @include sm {
-      grid-area: developers;
+      order: 2;
       margin-bottom: 0;
     }
 
@@ -67,16 +72,12 @@
   &__developer {
     margin-bottom: 19px;
 
-    &:nth-child(2) {
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
   &__copyright {
-
-    @include sm {
-      grid-area: copyright;
-    }
 
     @include lg {
       font-size: 20px;
