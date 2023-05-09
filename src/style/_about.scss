@@ -17,7 +17,7 @@
 
     @include xl {
       gap: 40px 30px;
-      grid-template-rows: min-content 1rf;
+      grid-template-rows: min-content 1fr;
       grid-template-areas: 
         'slider title'
         'slider content';
@@ -73,6 +73,11 @@
 
     @include xl {
       gap: 60px;
+    }
+
+    @include xxl {
+      max-height: 600px;
+      height: min-content;
     }
   }
 
