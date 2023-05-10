@@ -5,6 +5,7 @@ import 'swiper/scss/pagination';
 import './index.scss';
 import { initSliders } from './modules/sliders';
 import { initVideoBackground } from './modules/videoBackground';
+import { menuControl } from './modules/menuControl';
 
 
 // use modules
@@ -16,6 +17,7 @@ careerImageItem.forEach((item, i) => {
 });
 
 initVideoBackground();
+menuControl();
 
 initSliders('.about__slider', {
   pagination: {
