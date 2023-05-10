@@ -129,6 +129,13 @@ iframe {
   background: $second;
   border-radius: 80px;
 
+  &:hover {
+    color: $main;
+  }
+
+  &:focus {
+    border: 2px solid $main;
+  }
 
   &:after {
     content: '';
@@ -137,6 +144,7 @@ iframe {
     height: 16px;
     background: url('../img/arrow-right.svg') center/contain no-repeat;
   }
+
 
   @include lg {
     padding: 17px 32px;
