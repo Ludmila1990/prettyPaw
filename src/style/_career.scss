@@ -65,7 +65,10 @@
   }
 
   &__slider {
-    overflow: visible;
+    @include md {
+      overflow: visible;
+    }
+    
   }
 
   &__image-item {
@@ -74,6 +77,7 @@
     align-items: center;
 
     @include sm {
+      width: 48%;
       &_odd {
         width: 56%;
       }
