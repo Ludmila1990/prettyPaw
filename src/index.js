@@ -8,6 +8,7 @@ import { initSliders } from './modules/sliders';
 import { initVideoBackground } from './modules/videoBackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
+import { initScrollTopButton } from './modules/scrollTopButton';
 
 
 // use modules
@@ -21,6 +22,9 @@ careerImageItems.forEach((item, i) => {
 initVideoBackground();
 menuControl();
 locationHover();
+initScrollTopButton('arrow-top', {
+  hover: false,
+});
 
 initSliders('.about__slider', {
   pagination: {
